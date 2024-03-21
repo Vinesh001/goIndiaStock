@@ -4,7 +4,7 @@ import React from 'react'
 const StorieCard = () => {
     return (
         <div>
-            <div className="bg-white shadow-lg mb-[4rem]">
+            <div className="bg-white shadow-lg mb-[4rem] mx-4">
                 <div className="">
                     <Image src={"/data/image/mountain.jpg"} height={200} width={1000} alt='mountain' />
                 </div>

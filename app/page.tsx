@@ -64,7 +64,7 @@ export default function Home() {
               style={{
                 marginLeft:
                   navbar && window.innerWidth < 1024
-                    ? "50dvw"
+                    ? "80dvw"
                     : "0",
               }}
               onClick={() => {
@@ -102,7 +102,7 @@ export default function Home() {
           <div
             className={`w-1/4 flex flex-col gap-2 max-lg:w-[30dvw] max-md:w-[100dvw] `}
           >
-            <div className="font-bold text-md px-5 py-2 bg-gray-200 w-fit text-red-600 max-md:hidden">
+            <div className="font-bold text-md px-5 py-2 mx-4 bg-gray-200 w-fit text-red-600 max-md:hidden">
               MARKET STORIES
             </div>
             <div

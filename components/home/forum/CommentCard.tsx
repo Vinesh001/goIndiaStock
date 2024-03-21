@@ -38,27 +38,27 @@ const CommentCard = () => {
           <div className="flex justify-between">
             <div className="flex items-center gap-1">
               <div className="hover:cursor-pointer">
-                <FaRegHeart size={25} className="font-bold" />
+                <FaRegHeart size={20} className="font-bold" />
               </div>
-              <div className="text-xs font-bold">2k</div>
+              <div className="text-xs font-semibold">2k</div>
             </div>
             <div className="flex items-center gap-1">
               <div className="hover:cursor-pointer">
-                <LuEye size={25} className="font-bold" />
+                <LuEye size={20} className="font-bold" />
               </div>
-              <div className="text-xs font-bold">2k</div>
+              <div className="text-xs font-semibold">2k</div>
             </div>
             <div className="flex items-center gap-1">
               <div className="hover:cursor-pointer">
-                <FiMessageSquare size={25} className="font-bold" />
+                <FiMessageSquare size={20} className="font-bold" />
               </div>
-              <div className="text-xs font-bold">2k Comments</div>
+              <div className="text-xs font-semibold">2k Comments</div>
             </div>
             <div className="flex items-center gap-1">
               <div className="hover:cursor-pointer">
-                <IoShareSocialOutline size={25} className="font-bold" />
+                <IoShareSocialOutline size={20} className="font-bold" />
               </div>
-              <div className="text-xs font-bold">Share</div>
+              <div className="text-xs font-semibold">Share</div>
             </div>
           </div>
         </div>
