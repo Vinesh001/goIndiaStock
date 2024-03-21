@@ -41,7 +41,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className={`w-[25dvw] max-lg:w-[40dvw] flex flex-col items-center bg-[#1a3055] text-[#c7ced8] h-[100dvh] `}>
+      <div className={`w-[25dvw] max-lg:w-[50dvw] flex flex-col items-center bg-[#1a3055] text-[#c7ced8] h-[100dvh] `}>
         <div className="flex items-center p-4 gap-2  w-full justify-between border-b-4 border-[#354e71]">
           <div className="flex items-center gap-2">
             <div className="">

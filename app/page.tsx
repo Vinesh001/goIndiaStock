@@ -28,7 +28,7 @@ export default function Home() {
         <div
           className={`flex w-full h-full gap-10 overflow-y-scroll max-md:flex max-md:flex-col`}
         >
-          <div className="md:hidden flex font-semibold text-[1.3rem] bg-[#1e375f] text-white w-full text-center hover:cursor-pointer">
+          <div className="md:hidden flex font-semibold text-[0.8rem] bg-[#1e375f] text-white w-full text-center hover:cursor-pointer">
             <div
               className="py-5 w-1/2"
               onClick={() => {
@@ -64,7 +64,7 @@ export default function Home() {
               style={{
                 marginLeft:
                   navbar && window.innerWidth < 1024
-                    ? "40dvw"
+                    ? "50dvw"
                     : "0",
               }}
               onClick={() => {
