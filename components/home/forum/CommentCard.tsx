@@ -40,30 +40,30 @@ const CommentCard = () => {
               <div className="hover:cursor-pointer">
                 <FaRegHeart size={20} className="font-bold" />
               </div>
-              <div className="text-xs font-semibold">2k</div>
+              <div className="text-xs font-semibold max-md:text-[10px]">2k</div>
             </div>
             <div className="flex items-center gap-1">
               <div className="hover:cursor-pointer">
                 <LuEye size={20} className="font-bold" />
               </div>
-              <div className="text-xs font-semibold">2k</div>
+              <div className="text-xs font-semibold max-md:text-[10px]">2k</div>
             </div>
             <div className="flex items-center gap-1">
               <div className="hover:cursor-pointer">
                 <FiMessageSquare size={20} className="font-bold" />
               </div>
-              <div className="text-xs font-semibold">2k Comments</div>
+              <div className="text-xs font-semibold max-md:text-[10px]">2k Comments</div>
             </div>
             <div className="flex items-center gap-1">
               <div className="hover:cursor-pointer">
                 <IoShareSocialOutline size={20} className="font-bold" />
               </div>
-              <div className="text-xs font-semibold">Share</div>
+              <div className="text-xs font-semibold max-md:text-[10px]">Share</div>
             </div>
           </div>
         </div>
         <div className="">
-          <div className="text-[#2355a0] text-sm min-w-[70px] font-bold">
+          <div className="text-[#2355a0] text-sm max-md:text-[10px] min-w-[70px] font-bold">
             2 min ago
           </div>
         </div>
