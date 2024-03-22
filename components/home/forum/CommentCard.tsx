@@ -6,34 +6,37 @@ import { FiMessageSquare } from "react-icons/fi";
 import { IoShareSocialOutline } from "react-icons/io5";
 import NavContext from "@/contexts/context";
 
-const CommentCard = () => {
+interface CommentCardProps {
+  image: string;
+  heading: string;
+  paragraph: string;
+}
+
+const CommentCard: React.FC<CommentCardProps> = ({ image, heading, paragraph }) => {
     
     const navbar = useContext(NavContext);
 
   return (
     <div>
-      <div className="flex py-5  md:px-6 shadow-lg rounded-md mb-[4rem]">
+      <div className="flex py-5 mb-[6rem]  md:px-6 shadow-lg rounded-md max-md:mb-[1rem]">
         <div className="pr-4">
           <Image
-            src={"/data/image/vinesh_profile.png"}
-            width={50}
-            height={50}
+            src={image}
+            width={40}
+            height={40}
             alt="profile"
             className="rounded-full"
           />
         </div>
-        <div className="flex flex-col gap-3 w-full">
+        <div className="flex flex-col gap-6 w-full">
           <div className="flex gap-5 items-center ">
-            <div className="font-bold max-md:text-sm">Lorem Ipsum</div>
+            <div className="font-bold max-md:text-sm">{heading}</div>
             <div className="bg-[#2355a0] text-white px-5 py-1 rounded-full text-sm max-md:text-xs">
               Sector 2
             </div>
           </div>
           <div className="text-sm max-md:text-[12px]">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae
-            porro esse aspernatur doloremque illum blanditiis natus,
-            reprehenderit temporibus illo nam aliquid alias perspiciatis magnam
-            eveniet!
+            {paragraph}
           </div>
           <div className="flex justify-between">
             <div className="flex items-center gap-1">

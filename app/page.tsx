@@ -7,14 +7,16 @@ import { GoTriangleLeft } from "react-icons/go";
 import Image from "next/image";
 import { useState } from "react";
 import NavContext from "@/contexts/context";
+import data from "@/public/data/raw/forum";
+import storyData from "@/public/data/raw/story";
 
 export default function Home() {
   const [navbar, setNavbar] = useState(false);
   const [forums, setForums] = useState(true);
   const [stories, setStrories] = useState(false);
 
-  const story =!forums&&stories ? "block" : "hidden";
-  const forum =forums&&!stories ? "block" : "hidden";
+  const story = !forums && stories ? "block" : "hidden";
+  const forum = forums && !stories ? "block" : "hidden";
 
   return (
     <NavContext.Provider value={navbar}>
@@ -63,10 +65,7 @@ export default function Home() {
             <div
               className={`fixed top-1/2 -translate-y-1/2 w-[1.2rem] h-[7rem] bg-[#1e375f]`}
               style={{
-                marginLeft:
-                  navbar && window.innerWidth < 1024
-                    ? "80dvw"
-                    : "0",
+                marginLeft: navbar && window.innerWidth < 1024 ? "80dvw" : "0",
               }}
               onClick={() => {
                 const check: boolean = navbar === true ? false : true;
@@ -74,31 +73,27 @@ export default function Home() {
               }}
             >
               <div className="absolute top-1/2 right-[-10px] -translate-y-1/2 text-white">
-                {navbar?<GoTriangleLeft size={30} />:<GoTriangleRight size={30} />}
-                
+                {navbar ? (
+                  <GoTriangleLeft size={30} />
+                ) : (
+                  <GoTriangleRight size={30} />
+                )}
               </div>
             </div>
             <div className="font-bold text-xl px-5 py-2 ml-6 bg-gray-200 w-fit text-red-600 max-md:hidden">
               DISSCUSSION FORM
             </div>
-            <div 
+            <div
               className={`flex flex-col gap-20 bigScreen ${forum}`}
-              // style={{
-              //   display: forums ? "block" : "none",
-              // }}
             >
-              <CommentCard />
-              <CommentCard />
-              <CommentCard />
-              <CommentCard />
-              <CommentCard />
-              <CommentCard />
-              <CommentCard />
-              <CommentCard />
-              <CommentCard />
-              <CommentCard />
-              <CommentCard />
-              <CommentCard />
+              {data.map((item, key) => (
+                <CommentCard
+                  key={key}
+                  image={item.image}
+                  heading={item.heading}
+                  paragraph={item.paragraph}
+                />
+              ))}
             </div>
           </div>
           <div
@@ -109,22 +104,15 @@ export default function Home() {
             </div>
             <div
               className={`flex flex-col gap-10 bigScreen ${story}`}
-              // style={
-              //   {
-              //   display: !forums ? "block" : "none",
-              //   color:"green",
-              // }
-            // }
             >
-              <StorieCard />
-              <StorieCard />
-              <StorieCard />
-              <StorieCard />
-              <StorieCard />
-              <StorieCard />
-              <StorieCard />
-              <StorieCard />
-              <StorieCard />
+              {storyData.map((item, key) => (
+                <StorieCard
+                  key={key}
+                  image={item.image}
+                  heading={item.heading}
+                  paragraph={item.paragraph}
+                />
+              ))}
             </div>
           </div>
         </div>
