@@ -6,7 +6,6 @@ import { GoTriangleRight } from "react-icons/go";
 import { GoTriangleLeft } from "react-icons/go";
 import Image from "next/image";
 import { useState } from "react";
-import NavContext from "@/contexts/context";
 import data from "@/public/data/raw/forum";
 import storyData from "@/public/data/raw/story";
 
@@ -19,7 +18,6 @@ export default function Home() {
   const forum = forums && !stories ? "block" : "hidden";
 
   return (
-    <NavContext.Provider value={navbar}>
       <main className="flex w-[100dvw] h-[100dvh] ">
         {navbar ? (
           <div className="max-lg:fixed">
@@ -117,6 +115,5 @@ export default function Home() {
           </div>
         </div>
       </main>
-    </NavContext.Provider>
   );
 }

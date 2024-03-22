@@ -4,7 +4,6 @@ import { FaRegHeart } from "react-icons/fa";
 import { LuEye } from "react-icons/lu";
 import { FiMessageSquare } from "react-icons/fi";
 import { IoShareSocialOutline } from "react-icons/io5";
-import NavContext from "@/contexts/context";
 
 interface CommentCardProps {
   image: string;
@@ -14,7 +13,6 @@ interface CommentCardProps {
 
 const CommentCard: React.FC<CommentCardProps> = ({ image, heading, paragraph }) => {
     
-    const navbar = useContext(NavContext);
 
   return (
     <div>

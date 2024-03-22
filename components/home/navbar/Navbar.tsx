@@ -3,7 +3,6 @@ import Image from "next/image";
 import { BsFillBellFill } from "react-icons/bs";
 import { MdMessage } from "react-icons/md";
 import { FaCommentDollar } from "react-icons/fa6";
-import NavContext from "@/contexts/context";
 
 const Navbar = () => {
   const data: { logo: any; option: string }[] = [
@@ -37,7 +36,6 @@ const Navbar = () => {
     },
   ];
 
-  const navbar = useContext(NavContext)
 
   return (
     <div>
