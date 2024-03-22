@@ -74,9 +74,9 @@ export default function Home() {
             >
               <div className="absolute top-1/2 right-[-10px] -translate-y-1/2 text-white">
                 {navbar ? (
-                  <GoTriangleLeft size={30} />
+                  <GoTriangleLeft size={50} />
                 ) : (
-                  <GoTriangleRight size={30} />
+                  <GoTriangleRight size={50} />
                 )}
               </div>
             </div>
