@@ -3,6 +3,7 @@ import CommentCard from "@/components/home/forum/CommentCard";
 import StorieCard from "@/components/home/stories/StorieCard";
 import Navbar from "@/components/home/navbar/Navbar";
 import { GoTriangleRight } from "react-icons/go";
+import { GoTriangleLeft } from "react-icons/go";
 import Image from "next/image";
 import { useState } from "react";
 import NavContext from "@/contexts/context";
@@ -12,8 +13,8 @@ export default function Home() {
   const [forums, setForums] = useState(true);
   const [stories, setStrories] = useState(false);
 
-  const story =!forums ? "block" : "none";
-  const forum =forums ? "block" : "none";
+  const story =!forums&&stories ? "block" : "hidden";
+  const forum =forums&&!stories ? "block" : "hidden";
 
   return (
     <NavContext.Provider value={navbar}>
@@ -73,7 +74,8 @@ export default function Home() {
               }}
             >
               <div className="absolute top-1/2 right-[-10px] -translate-y-1/2 text-white">
-                <GoTriangleRight size={30} />
+                {navbar?<GoTriangleLeft size={30} />:<GoTriangleRight size={30} />}
+                
               </div>
             </div>
             <div className="font-bold text-xl px-5 py-2 ml-6 bg-gray-200 w-fit text-red-600 max-md:hidden">
@@ -81,9 +83,9 @@ export default function Home() {
             </div>
             <div 
               className={`flex flex-col gap-20 bigScreen ${forum}`}
-              style={{
-                display: forums ? "block" : "none",
-              }}
+              // style={{
+              //   display: forums ? "block" : "none",
+              // }}
             >
               <CommentCard />
               <CommentCard />

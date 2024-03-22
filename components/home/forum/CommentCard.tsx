@@ -12,7 +12,7 @@ const CommentCard = () => {
 
   return (
     <div>
-      <div className="flex px-5 pl-7 py-5 shadow-lg rounded-md mb-[4rem]">
+      <div className="flex py-5  md:px-6 shadow-lg rounded-md mb-[4rem]">
         <div className="pr-4">
           <Image
             src={"/data/image/vinesh_profile.png"}
@@ -24,12 +24,12 @@ const CommentCard = () => {
         </div>
         <div className="flex flex-col gap-3 w-full">
           <div className="flex gap-5 items-center ">
-            <div className="font-bold">Lorem Ipsum</div>
-            <div className="bg-[#2355a0] text-white px-5 py-1 rounded-full text-sm">
+            <div className="font-bold max-md:text-sm">Lorem Ipsum</div>
+            <div className="bg-[#2355a0] text-white px-5 py-1 rounded-full text-sm max-md:text-xs">
               Sector 2
             </div>
           </div>
-          <div className="text-sm">
+          <div className="text-sm max-md:text-[12px]">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae
             porro esse aspernatur doloremque illum blanditiis natus,
             reprehenderit temporibus illo nam aliquid alias perspiciatis magnam
