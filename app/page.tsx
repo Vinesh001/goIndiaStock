@@ -19,6 +19,8 @@ export default function Home() {
 
   return (
       <main className="flex w-[100dvw] h-[100dvh] ">
+
+        {/* Showing navbar when navbar state is true otherwise dont show it  */}
         {navbar ? (
           <div className="max-lg:fixed">
             <Navbar />
@@ -26,9 +28,12 @@ export default function Home() {
         ) : (
           ""
         )}
+
+
         <div
           className={`flex w-full h-full gap-10 overflow-y-scroll max-md:flex max-md:flex-col`}
         >
+          {/* this is for mobile heading  */}
           <div className="md:hidden flex font-semibold text-[0.8rem] bg-[#1e375f] text-white w-full text-center hover:cursor-pointer">
             <div
               className="py-5 w-1/2"
@@ -57,6 +62,7 @@ export default function Home() {
               Market Stories
             </div>
           </div>
+
           <div
             className={`w-3/4 flex flex-col gap-2 max-lg:w-[64dvw] max-md:w-[100dvw]`}
           >
@@ -84,6 +90,7 @@ export default function Home() {
             <div
               className={`flex flex-col gap-20 bigScreen ${forum}`}
             >
+              {/* Fetch data and show (data has been passed to the CommentCard) */}
               {data.map((item, key) => (
                 <CommentCard
                   key={key}
@@ -103,6 +110,7 @@ export default function Home() {
             <div
               className={`flex flex-col gap-10 bigScreen ${story}`}
             >
+              {/* Fetch data and show (data has been passed to the StorieCard) */}
               {storyData.map((item, key) => (
                 <StorieCard
                   key={key}
